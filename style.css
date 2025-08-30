@@ -1,0 +1,13 @@
+* *::after *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  color: #ffffff;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
