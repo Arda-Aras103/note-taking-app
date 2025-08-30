@@ -1,5 +1,11 @@
 * *::after *::before {
   box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --primary-padding: 1.3rem;
+  --primary-margin: 1.3em;
 }
 
 body {
@@ -11,3 +17,85 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.header-right {
+  display: flex;
+  margin: var(--primary-margin);
+}
+
+.log-in {
+  display: inline-block;
+  background-color: #f4511e;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  margin-left: var(--primary-margin);
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.log-in:hover,
+.log-in:focus {
+  background-color: #f4501eb9;
+}
+
+.log-in .log-in-text {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: padding-right 0.5s;
+}
+
+.log-in .log-in-text:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  right: -10px;
+  transition: opacity 0.5s, right 0.5s;
+}
+
+.log-in:hover .log-in-text,
+.log-in:active .log-in-text {
+  padding-right: 25px;
+}
+
+.log-in:hover .log-in-text:after,
+.log-in:active .log-in-text:after {
+  opacity: 1;
+  right: 0;
+}
+
+.note {
+  background-color: antiquewhite;
+  width: 300px;
+  height: 300px;
+  color: black;
+  border-radius: 8px;
+  margin: var(--primary-margin);
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.edit-delete-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.edit {
+  margin-right: 0.8rem;
+}
+
+.note-title,
+.note-content {
+  margin-left: 0.5rem;
+}
+
+.favorited::before {
+  content: "🪄";
+  margin-right: 200px;
+}
+
+

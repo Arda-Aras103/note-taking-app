@@ -14,12 +14,26 @@
     <header class="page-header">
       <h1 class="page-title">Note-Taking App</h1>
 
-      <form action="/database.json" method="get">
-        <input type="search" placeholder="Find Note..." />
-      </form>
-
-      <button>Log in</button>
-      <div class=""></div>
+      <div class="header-right">
+        <form action="/database.json" method="get">
+          <input class="search-bar" type="search" placeholder="Find Note..." />
+        </form>
+        <button class="log-in"><span class="log-in-text">Log in</span></button>
+      </div>
     </header>
+
+    <main>
+      <button class="add-note-button">Add Note</button>
+      <div class="note-list"></div>
+
+      <div class="note">
+        <span class="edit-delete-button favorited">
+          <span class="material-symbols-outlined edit"> edit </span>
+          <span class="material-symbols-outlined delete"> delete </span>
+        </span>
+        <h2 class="note-title">Title</h2>
+        <p class="note-content">Content</p>
+      </div>
+    </main>
   </body>
 </html>
